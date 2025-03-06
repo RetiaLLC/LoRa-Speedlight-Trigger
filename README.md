@@ -7,17 +7,16 @@ This repository contains the CircuitPython code needed to use the USB Nugget and
 ---
 ## Parts:
 
-Electronics:
-	-[USB Nugget w/ LoLin ESP32 S3 Mini ](https://retia.io/products/bluetooth-nugget-esp32s3)
-	-[LoRa Backpack w/ RFM95W 915Mhz Module](https://retia.io/products/lora-breakout-for-usb-bluetooth-nugget)
-	-[5V DC Relay](https://a.co/d/1T0jNxT)
-	-[3.5mm to Flash Sync Cable](https://a.co/d/95ebfrs)
-	-Speedlight Camera Flash
+Electronics:  
+	-[USB Nugget w/ LoLin ESP32 S3 Mini ](https://retia.io/products/bluetooth-nugget-esp32s3)  
+	-[LoRa Backpack w/ RFM95W 915Mhz Module](https://retia.io/products/lora-breakout-for-usb-bluetooth-nugget)  
+	-[5V DC Relay](https://a.co/d/1T0jNxT)  
+	-[3.5mm to Flash Sync Cable](https://a.co/d/95ebfrs)  
+	-Speedlight Camera Flash  
 
 ---
-## Notes:
+## Nugget Pinout:
 
-Nugget Pinout:
 
 | Nugget       | Pin  |
 | ------------ | ---- |
@@ -35,14 +34,12 @@ Nugget Pinout:
 | RESET        | IO4  |
 | SCL          | IO36 |
 | SDA          | IO35 |
-| TX_RYLR      | IO33 |
-| RX_RYLR      | IO37 |
-| RESET_RYLR   | IO2  |
 | CS_ACCESSORY | IO14 |
 
+---
+## Setup:
 
--First flash the Nugget with CircuitPython
--Press "0" and then "Reset" to enter flashing mode
--Unzip and then drag and drop the receiver/transmitter files to your devices. Make sure to copy both the code.py and the lib folder
--Press the "A" button on the transmitter to trigger the LoRa transmit function
--On the receiver, the CS_ACCESSORY pin on the LoRa backpack will be driven high/low when a LoRa packet is received
+Step 1: Flash the Nugget with CircuitPython (Press "0" and then "Reset" to enter flashing mode)  
+Step 2: Unzip and then drag and drop the receiver/transmitter files to your devices. Make sure to copy both the code.py and the lib folder  
+Step 3: Connect the data in pin on the relay to the CS_ACCESSORY pin on the LoRa backpack  
+Step 4: Press the "A" button on the transmitter to trigger the LoRa transmit function. The GPIO pin will be driven high/low on the receiver side on every packet received  
